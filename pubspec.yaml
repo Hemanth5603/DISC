@@ -16,7 +16,7 @@ dependencies:
   google_fonts: ^5.1.0
   pinput: ^2.2.31
   sms_autofill: ^2.3.0
-  flashy_tab_bar2: ^0.0.5
+  flashy_tab_bar2: ^0.0.6
   intl: ^0.18.1
 
 dev_dependencies:

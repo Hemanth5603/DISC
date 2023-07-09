@@ -3,7 +3,9 @@ import "package:flutter/material.dart";
 import "package:get/get.dart";
 import "package:sms_autofill/sms_autofill.dart";
 
-import "../view/authorised/home.dart";
+import "../view/authorization/login.dart";
+
+
 
 class authController extends GetxController{
   final auth = FirebaseAuth.instance;
@@ -57,7 +59,8 @@ class authController extends GetxController{
 
   Future<bool>  verifyOtp(String otp)async {
     var credentials = await auth.signInWithCredential(
-      PhoneAuthProvider.credential(verificationId: this.verificationID.value,
+      PhoneAuthProvider.credential(verificationId:
+       this.verificationID.value,
       smsCode: otp)
     );
     return credentials.user != null ? true : false;
@@ -65,7 +68,7 @@ class authController extends GetxController{
 
   void otpController(String otp) async{
     var isVerified = await verifyOtp(otp);
-    isVerified ? Get.offAll(Home()) : Get.back();
+    isVerified ? Get.offAll(Login()) : Get.back();
   }
 
 }

@@ -1,3 +1,5 @@
+
+import 'package:disc/view/authorised/showScreen.dart';
 import 'package:disc/view/authorization/login.dart';
 import 'package:disc/view/authorization/otp.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -28,7 +30,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData.dark(useMaterial3: true),
       home: Scaffold(
         body: Center(
-          child: Login(),
+          child: ShowScreen(),
         ),
       ),
     );
